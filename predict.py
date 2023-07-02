@@ -117,7 +117,7 @@ class Predictor(BasePredictor):
             if output.nsfw_content_detected and output.nsfw_content_detected[i]:
                 continue
 
-            output_path = f"/tmp/out-{i}.png"
+            output_path = 'instance/'+MODEL_ID+"out-{i}.png"
             sample.save(output_path)
             output_paths.append(Path(output_path))
 
